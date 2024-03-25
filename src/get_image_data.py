@@ -1,3 +1,5 @@
+import os.path
+
 import numpy as np
 import skimage as ski
 import tensorflow as tf
@@ -6,14 +8,22 @@ from PIL import Image
 from torchvision.transforms import functional as V1F
 from torchvision.transforms.v2 import functional as V2F
 
-h, w = 20, 20
-r = np.random.randint(0, 256, size=(h, w), dtype=np.uint8)
-g = np.random.randint(0, 256, size=(h, w), dtype=np.uint8)
-b = np.random.randint(0, 256, size=(h, w), dtype=np.uint8)
+
+test_image_path = os.path.join(os.path.dirname(__file__), "kodim15.png")
+image = Image.open(test_image_path)
+image_rgb = image.convert("RGB")
+test_image = np.array(image_rgb)
+assert test_image.shape[2] == 3
+assert test_image.dtype == np.uint8
+r = test_image[:, :, 0]
+g = test_image[:, :, 1]
+b = test_image[:, :, 2]
+assert r.shape == g.shape == b.shape
 
 
 def get_input_image_and_expected_output(source_metadata, target_metadata):
     is_gray_to_color = source_metadata["color_channel"] == "gray" and target_metadata["color_channel"] != "gray"
+    print(get_test_images(source_metadata))
     return get_test_images(source_metadata), get_test_images(target_metadata, is_gray_to_color)
 
 
