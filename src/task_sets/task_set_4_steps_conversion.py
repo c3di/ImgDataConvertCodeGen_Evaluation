@@ -1,10 +1,3 @@
-def numpy_gray_nonechannel_unbatched_uint8_to_rgb_channelfirst_batched_float0to1(image):
-    """
-    When use scikit-image and opencv-image
-    """
-    # image = Your Code Here
-    return image
-
 
 def numpy_rgb_channelfirst_batched_float0to1_to_rgb_channellast_unbatched_uint8(image):
     """

@@ -6,14 +6,6 @@ def numpy_bgr_uint8_to_rgb_float(image):
     return image
 
 
-def numpy_with_channelfirst_float_from_rgb_unbatched_to_gray_batched(image):
-    """
-    When use scikit-image and opencv-image
-    """
-    # image = Your Code Here
-    return image
-
-
 def tf_rgb_channelfirst_batched_to_gray_channellast_unbatched(image):
     """
     When use scikit-image and opencv-image
