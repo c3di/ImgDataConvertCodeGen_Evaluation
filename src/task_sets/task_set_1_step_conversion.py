@@ -6,7 +6,7 @@ def scikit_rgb_to_opencv_bgr(image):
     return image
 
 
-def numpy_channel_first_to_last(image):
+def numpy_channelfirst_to_channellast(image):
     """
     When use scikit-image and opencv-image
     """
@@ -49,7 +49,7 @@ one_step_conversion_task_set = [
       "minibatch_input": False, "image_data_type": 'uint8', "device": 'cpu'},
      {"data_representation": "numpy.ndarray", "color_channel": 'rgb', "channel_order": 'channel last',
       "minibatch_input": False, "image_data_type": 'uint8', "device": 'cpu'},
-     numpy_channel_first_to_last),
+     numpy_channelfirst_to_channellast),
 
     ({"data_representation": "tf.tensor", "color_channel": 'rgb', "channel_order": 'channel last',
       "minibatch_input": True, "image_data_type": 'uint8', "device": 'cpu'},
