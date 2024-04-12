@@ -70,6 +70,12 @@ two_steps_conversion_task_set = [
     
     ({"data_representation": "numpy.ndarray", "color_channel": 'rgb', "channel_order": 'channel first',
       "minibatch_input": False, "image_data_type": 'float32(0to1)', "device": 'cpu'},
+     {"data_representation": "numpy.ndarray", "color_channel": 'gray', "channel_order": 'channel first',
+      "minibatch_input": True, "image_data_type": 'float32(0to1)', "device": 'cpu'},
+     numpy_with_channelfirst_float_from_rgb_unbatched_to_gray_batched),
+    
+    ({"data_representation": "numpy.ndarray", "color_channel": 'rgb', "channel_order": 'channel first',
+      "minibatch_input": False, "image_data_type": 'float32(0to1)', "device": 'cpu'},
      {"data_representation": "numpy.ndarray", "color_channel": 'rgb', "channel_order": 'channel first',
       "minibatch_input": False, "image_data_type": 'uint8', "device": 'cpu'},
      numpy_float0to1_to_uint8),
