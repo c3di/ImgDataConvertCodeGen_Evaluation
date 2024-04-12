@@ -1,4 +1,4 @@
-def numpy_rgb_to_opencv_bgr(image):
+def scikit_rgb_to_opencv_bgr(image):
     """
     When use scikit-image and opencv-image
     """
@@ -43,7 +43,7 @@ one_step_conversion_task_set = [
       "minibatch_input": False, "image_data_type": 'uint8', "device": 'cpu'},
      {"data_representation": "numpy.ndarray", "color_channel": 'bgr', "channel_order": 'channel first',
       "minibatch_input": False, "image_data_type": 'uint8', "device": 'cpu'},
-     numpy_rgb_to_opencv_bgr),
+     scikit_rgb_to_opencv_bgr),
 
     ({"data_representation": "numpy.ndarray", "color_channel": 'rgb', "channel_order": 'channel first',
       "minibatch_input": False, "image_data_type": 'uint8', "device": 'cpu'},
